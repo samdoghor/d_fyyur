@@ -17,7 +17,7 @@ def db_setup(app):
 #----------------------------------------------------------------------------#
 
 class Venue(db.Model):
-    __tablename__ = 'Venue'
+    __tablename__ = 'venue'
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
@@ -95,7 +95,7 @@ class Venue(db.Model):
     # TODO: implement any missing fields, as a database migration using Flask-Migrate
 
 class Artist(db.Model):
-    __tablename__ = 'Artist'
+    __tablename__ = 'artist'
     
 
     id = Column(Integer, primary_key=True)
@@ -160,7 +160,7 @@ class Artist(db.Model):
 #show model
 class Show(db.Model):
 
-    __tablename__ = 'Show'
+    __tablename__ = 'show'
     id = db.Column(Integer,primary_key=True)
     venue_id = db.Column(Integer, ForeignKey(Venue.id), nullable=False)
     artist_id = db.Column(Integer, ForeignKey(Artist.id), nullable=False)
